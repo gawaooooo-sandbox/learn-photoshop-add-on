@@ -1,0 +1,10 @@
+{
+  "name": "first-plugin",
+  "version": "0.0.1",
+  "generator-core-version": "1 - 3.12.1",
+  "description": "first generator plugin",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

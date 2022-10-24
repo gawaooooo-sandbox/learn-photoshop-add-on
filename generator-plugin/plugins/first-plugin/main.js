@@ -9,6 +9,8 @@
   function init(generator) {
       _generator = generator;
       console.log("はじめてのPhotoshop Generatorプラグイン");
+
+      _generator.addMenuItem(MENU_ID, "はじめてのプラグイン", true, false);
   }
 
   exports.init = init;

@@ -1,0 +1,3 @@
+[submodule "generator-plugin/generator-core"]
+	path = generator-plugin/generator-core
+	url = https://github.com/adobe-photoshop/generator-core.git

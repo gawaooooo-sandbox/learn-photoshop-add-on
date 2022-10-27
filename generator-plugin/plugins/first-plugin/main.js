@@ -14,6 +14,9 @@
 
       // メニューのクリックを捕捉する
       _generator.onPhotoshopEvent('generatorMenuChanged', onGeneratorMenuChanged);
+
+      // レイヤーを選択した・レイヤーに変更を加えたなど、主に加工に関わる操作をした際に発行されるイベント
+      _generator.onPhotoshopEvent('imageChanged', onImageChanged);
   }
 
   function onGeneratorMenuChanged(event) {
@@ -25,6 +28,10 @@
       console.log('menuState: %o', menuState);
       _generator.toggleMenu(MENU_ID, menuState.enabled, !menuState.checked);
     }
+  }
+
+  function onImageChanged(event) {
+    console.log(event);
   }
 
 

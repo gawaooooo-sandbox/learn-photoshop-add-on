@@ -17,6 +17,9 @@
 
       // レイヤーを選択した・レイヤーに変更を加えたなど、主に加工に関わる操作をした際に発行されるイベント
       _generator.onPhotoshopEvent('imageChanged', onImageChanged);
+
+      // ツールパレットでツールを変更した際に発行されるイベント
+      _generator.onPhotoshopEvent('toolChanged', onToolChanged);
   }
 
   function onGeneratorMenuChanged(event) {
@@ -31,6 +34,11 @@
   }
 
   function onImageChanged(event) {
+    console.log(stringify(event));
+  }
+
+  function onToolChanged(event) {
+    console.log('ツールが変更されました');
     console.log(stringify(event));
   }
 

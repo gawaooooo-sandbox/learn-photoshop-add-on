@@ -17,8 +17,13 @@
   }
 
   function onGeneratorMenuChanged(event) {
-    if (event.generatorMenuChanged.name === MENU_ID) {
+    const changedMenu = event.generatorMenuChanged;
+    if (changedMenu.name === MENU_ID) {
       console.log('はじめてのプラグインが実行されました。')
+      
+      const menuState = _generator.getMenuState(changedMenu.name);
+      console.log('menuState: %o', menuState);
+      _generator.toggleMenu(MENU_ID, menuState.enabled, !menuState.checked);
     }
   }
 

@@ -31,9 +31,17 @@
   }
 
   function onImageChanged(event) {
-    console.log(event);
+    console.log(stringify(event));
   }
 
+  function stringify(object) {
+    try {
+      return JSON.stringify(object, null, ' ');
+    } catch (e) {
+      console.error(e);
+    }
+    return String(object);
+  }
 
   exports.init = init;
 }());
